@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'no-reply@eventbriteconfinement.fr'
+  default from: 'facco.clement@gmail.com'
   layout 'mailer'
 end
