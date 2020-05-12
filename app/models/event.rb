@@ -2,7 +2,6 @@ class Event < ApplicationRecord
   has_many :attendances
   has_many :users, through: :attendances
   
-  validate :duration_modulo_5
   validate :start_date_cannot_be_in_the_past
 
   validates :start_date, presence: true 
@@ -16,5 +15,13 @@ class Event < ApplicationRecord
   validates :price, presence: true, numericality: { in: 1..1000, }
   
   validates :location, presence: true
+
+private
+
+  def start_date_cannot_be_in_the_past
+    if start_date < Time.now
+      errors.add(:start_date, 'No past date')
+    end
+  end
 
 end
