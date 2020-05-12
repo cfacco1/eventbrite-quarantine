@@ -36,7 +36,7 @@
             My Britney Profil
           </button>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <%= link_to "Me", user_path(current_user.id), class: "nav-link" %>
+                   
                     <%= link_to "Disconnect", destroy_user_session_path, methode: :delete, data: { confirm: 'Do you really want to LEAVE BRITNEY ALONE?', }, class: "dropdown-item" %>
           </div>
         <% else %>
