@@ -1,2 +1,15 @@
-<h1>Events#show</h1>
-<p>Find me in app/views/events/show.html.erb</p>
+<div class= row style= "display: flex; flex-flow: row wrap; justify-content: space-around">
+	<img class="img-thumbnail" src="https://www.slate.fr/sites/default/files/styles/1060x523/public/britney_spears_sexisme.jpg" alt="Card image cap">
+</div>
+
+<div class="jumbotron">
+<h1> <%= @event.title %> </h1>
+
+<strong class="text-secondary"> How Long : </strong>      <%=@event.duration %> min.<br/>
+</p>
+  <strong class="text-secondary">Place : </strong>       <%=@event.location%><br/>
+  <strong class="text-secondary">Price : </strong>       <%=@event.price%> €<br/>
+  <strong class="text-secondary">Date : </strong>       <%=@event.start_date.strftime("%d/%m/%Y") %> à <%=@event.start_date.strftime("%H:%M")%><br/>
+<p> <%= @event.description %> </p>
+Participants : <%=@event.users.count%><br/>
+</div>

@@ -35,9 +35,9 @@
           <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             My Britney Profil
           </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                   
-                    <%= link_to "Disconnect", destroy_user_session_path, method: :delete, data: { confirm: 'Do you really want to LEAVE BRITNEY ALONE?', }, class: "dropdown-item" %>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">         
+          <%= link_to "Mon profil", user_path(current_user.id), class: "dropdown-item" %>
+          <%= link_to "Disconnect", destroy_user_session_path, method: :delete, data: { confirm: 'Do you really want to LEAVE BRITNEY ALONE?', }, class: "dropdown-item" %>
           </div>
         <% else %>
           <div class="form-inline my-2 my-lg-0 nav-item">
