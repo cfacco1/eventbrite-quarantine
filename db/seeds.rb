@@ -13,13 +13,35 @@ User.destroy_all
   )
 end
 
-20.times do
+1.times do
   Event.create!(
-    title: Faker::Music.album,
-    description: Faker::Alphanumeric.alphanumeric(number: 20),
+    title: "Britney burned the Gym Festival",
+    description: "Her dance moves are red hot, her style is sizzling. But always one to fan the flames of pop culture, Britney Spears has announced that she accidentally burned down her home gym",
     start_date: Faker::Date.forward(days: 90),
     duration: rand(1..3)*5*600,
     price: rand(1..1000),
-    location: Faker::Address.community
+    location: "Los Angeles"
+    )
+end
+
+1.times do
+  Event.create!(
+    title: "Britney shaved her head Commemoration",
+    description: "It was, you know, “I just don’t want anybody, anybody touching my head. I don’t want anyone touching my hair. I’m sick of people touching my hair.",
+    start_date: Faker::Date.forward(days: 90),
+    duration: rand(1..3)*5*600,
+    price: rand(1..1000),
+    location: "Los Angeles"
+    )
+end
+
+1.times do
+  Event.create!(
+    title: "Britney's Birthday",
+    description: "baby baby one more time 2 december",
+    start_date: Faker::Date.forward(days: 90),
+    duration: rand(1..3)*5*600,
+    price: rand(1..1000),
+    location: "London"
     )
 end
